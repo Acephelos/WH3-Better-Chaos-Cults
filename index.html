@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chaos Cult Building Reports</title>
+    <style>
+        :root {
+            --bg: #101315;
+            --panel: #1a2024;
+            --panel-soft: #20282d;
+            --panel-strong: #263038;
+            --text: #eee8dc;
+            --muted: #abb3ad;
+            --line: #3d4850;
+            --line-soft: #2f3940;
+            --accent: #d9a24c;
+            --khorne: #c95f55;
+            --nurgle: #8fab63;
+            --slaanesh: #b884b7;
+            --tzeentch: #6fa8c9;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant-numeric: lining-nums;
+            line-height: 1.55;
+        }
+
+        a { color: inherit; }
+
+        .page {
+            width: 100%;
+            max-width: 1240px;
+            min-height: 100vh;
+            margin: 0 auto;
+            padding: 28px 18px 36px;
+        }
+
+        .report-header {
+            padding: 18px 20px;
+            margin-bottom: 16px;
+            background: var(--panel-strong);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+        }
+
+        .report-header h1 {
+            margin: 0 0 8px;
+            color: var(--accent);
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            line-height: 1.15;
+        }
+
+        .report-header p {
+            max-width: 820px;
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            align-items: stretch;
+        }
+
+        .report-link {
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+            padding: 18px 19px 20px;
+            color: var(--text);
+            text-decoration: none;
+            background:
+                linear-gradient(135deg, rgba(var(--god-rgb), 0.2), rgba(var(--god-rgb), 0.05) 42%, rgba(32, 40, 45, 0.1)),
+                var(--panel);
+            border: 1px solid rgba(var(--god-rgb), 0.28);
+            border-radius: 8px;
+        }
+
+        .report-link:hover,
+        .report-link:focus-visible {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 1px rgba(var(--god-rgb), 0.14);
+            outline: none;
+        }
+
+        .report-link h2 {
+            margin: 0 0 8px;
+            color: #d9c7ad;
+            font-size: 1.35rem;
+            line-height: 1.2;
+        }
+
+        .report-link p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.98rem;
+            line-height: 1.52;
+        }
+
+        .khorne { --accent-color: var(--khorne); --god-rgb: 201, 95, 85; }
+        .nurgle { --accent-color: var(--nurgle); --god-rgb: 143, 171, 99; }
+        .slaanesh { --accent-color: var(--slaanesh); --god-rgb: 184, 132, 183; }
+        .tzeentch { --accent-color: var(--tzeentch); --god-rgb: 111, 168, 201; }
+
+        @media (max-width: 720px) {
+            .page { padding: 14px 10px 26px; }
+            .report-header { padding: 15px; }
+            .report-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header class="report-header">
+            <h1>Better Chaos Cults (Beta)</h1>
+            <p>Select a Dark God for an early preview of what the next Better Chaos Cults update might contain for them.</p>
+        </header>
+
+        <section class="report-grid" aria-label="Cult building reports">
+            <a class="report-link khorne" href="khorne_cult_buildings.html">
+                <h2>Khorne</h2>
+                <p>Khorne's cults turn foreign lands into a pressure cooker of rage. They thrive where order is already cracking, feeding on war and bloodshed to drag factions into violence.</p>
+            </a>
+
+            <a class="report-link nurgle" href="nurgle_cult_buildings.html">
+                <h2>Nurgle</h2>
+                <p>Nurgle's cults are slow, patient infestations. They seed disease and despair until the area becomes a self-sustaining garden of rot.</p>
+            </a>
+
+            <a class="report-link slaanesh" href="slaanesh_cult_buildings.html">
+                <h2>Slaanesh</h2>
+                <p>TBA</p>
+            </a>
+
+            <a class="report-link tzeentch" href="tzeentch_cult_buildings.html">
+                <h2>Tzeentch</h2>
+                <p>Tzeentch's cults are hidden machinery for manipulation. They can improve a foreign land just enough to make it useful, or bury it under conspiracy, diplomatic incidents, and military sabotage.</p>
+            </a>
+        </section>
+    </main>
+</body>
+</html>
