@@ -6,21 +6,27 @@
     <title>Nurgle Cult Buildings</title>
     <style>
         :root {
-            --bg: #101315;
-            --panel: #1a2024;
-            --panel-soft: #20282d;
-            --panel-strong: #263038;
+            --bg: #10140f;
+            --panel: #1a2118;
+            --panel-soft: #202a1d;
+            --panel-strong: #293522;
             --text: #eee8dc;
-            --muted: #abb3ad;
-            --line: #3d4850;
-            --line-soft: #2f3940;
-            --accent: #d9a24c;
-            --accent-alt: #77b6a8;
-            --effect-green: #7fbf88;
+            --muted: #b2b9a8;
+            --line: #3e4b38;
+            --line-soft: #303b2b;
+            --accent: #a8b85a;
+            --accent-alt: #c58e4c;
+            --heading-gradient-start: #a8b85a;
+            --heading-gradient-end: #a8b85a;
+            --effect-green: #97bf6a;
             --effect-red: #d47870;
-            --effect-gold: #d9a24c;
+            --effect-gold: #c58e4c;
             --effect-teal: #77b6a8;
-            --code-bg: #0b0d0f;
+            --code-bg: #0b0e0a;
+            --code-text: #eef0cc;
+            --meta-strong: #d5d997;
+            --heading-muted: #ccd1a6;
+            --effect-group-bg: rgba(41, 53, 34, 0.42);
         }
         * { box-sizing: border-box; }
         html { scroll-padding-top: 14px; }
@@ -98,6 +104,16 @@
             font-size: clamp(1.7rem, 2.5vw, 2.45rem);
             line-height: 1.15;
         }
+        @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+            .heading-text {
+                display: inline-block;
+                color: transparent;
+                background: linear-gradient(180deg, var(--heading-gradient-start), var(--heading-gradient-end));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
         .report-note {
             margin: 0 0 10px;
             color: var(--muted);
@@ -107,7 +123,7 @@
             padding-left: 1.1rem;
         }
         .report-meta li + li, .building-meta li + li { margin-top: 2px; }
-        .report-meta strong, .building-meta strong { color: #f0d5a9; }
+        .report-meta strong, .building-meta strong { color: var(--meta-strong); }
         .building-card {
             padding: 15px 16px;
             scroll-margin-top: 14px;
@@ -121,7 +137,7 @@
         }
         .building-card h3 {
             margin: 0 0 6px;
-            color: #d9c7ad;
+            color: var(--heading-muted);
             font-size: 1.02rem;
             line-height: 1.25;
         }
@@ -135,14 +151,14 @@
             overflow: hidden;
             border: 1px solid var(--line-soft);
             border-radius: 7px;
-            background: rgba(32, 40, 45, 0.42);
+            background: var(--effect-group-bg);
         }
         .effect-group h3 {
             margin: 0;
             padding: 8px 11px;
             border-bottom: 1px solid var(--line-soft);
             background: var(--panel-strong);
-            color: #d9c7ad;
+            color: var(--heading-muted);
         }
         .plain-list, .slot-list, .stat-list, .effect-list {
             margin: 0;
@@ -160,6 +176,21 @@
             border-radius: 6px;
             background: var(--panel-soft);
         }
+        .effect-text { margin: 0; }
+        .effect-detail {
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+        .effect-detail summary {
+            cursor: pointer;
+            color: var(--accent-alt);
+            font-weight: 700;
+            line-height: 1.25;
+        }
+        .effect-detail p {
+            margin: 5px 0 0;
+        }
         .effect-item-green { border-left-color: var(--effect-green); }
         .effect-item-red { border-left-color: var(--effect-red); }
         .effect-item-gold { border-left-color: var(--effect-gold); }
@@ -168,7 +199,7 @@
             padding: 0.08em 0.28em;
             border-radius: 4px;
             background: var(--code-bg);
-            color: #f4e6cf;
+            color: var(--code-text);
             font-family: Consolas, Courier New, monospace;
             font-size: 0.93em;
             overflow-wrap: anywhere;
@@ -197,236 +228,244 @@
 <main class="page">
 <div class="layout">
 <aside class="toc" aria-label="Contents">
-<h2>Contents</h2>
+<h2><span class="heading-text">Contents</span></h2>
 <ul class="toc-list">
 <li><a href="#summary">Summary</a></li>
-<li class="toc-building"><a href="#building-wh3-main-nur-cult-1">Pox Weaver</a></li>
-<li class="toc-building"><a href="#building-wh3-main-nur-cult-2">Pathogen Propagator</a></li>
-<li class="toc-building"><a href="#building-wh3-main-nur-cult-3">Virality Mutator</a></li>
-<li class="toc-building"><a href="#building-wh3-main-nur-cult-4">Septic Phagelair</a></li>
-<li class="toc-building"><a href="#building-wh3-main-nur-cult-corruption-1">Sporulation Cultivator</a></li>
-<li class="toc-building"><a href="#building-wh3-main-nur-cult-corruption-2">Concoction Chamber</a></li>
-<li class="toc-building"><a href="#building-wh3-main-nur-cult-magus">Cult Magus Chambers</a></li>
-<li class="toc-building"><a href="#building-wh3-main-nur-cult-teleport">Rite of Summoning</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-nur-cult-magus-doctor">Cult Magus Clinic</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-nur-cult-magus-plague-colony">Cult Magus Plague Colony</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-nur-cult-magus-fulcrum-plagues">Fulcrum of Virulence</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-nur-cult-magus-fulcrum-daemons">Exaltation of Fleshy Masses</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-nur-cult-magus-fulcrum-garden">Endemic Gardens</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-nur-cult-ritual-anchor">Fester Node</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-nur-cult-teleport-cultist">Plagueling&#39;s Portal</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-nur-cult-ancillary-smith">Harvest of Spoils</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-nur-cult-magus-herald-of-apocalypse">Herald of the Apocalypse</a></li>
+<li class="toc-building"><a href="#building-1-pox-weaver">Pox Weaver</a></li>
+<li class="toc-building"><a href="#building-2-pathogen-propagator">Pathogen Propagator</a></li>
+<li class="toc-building"><a href="#building-3-virality-mutator">Virality Mutator</a></li>
+<li class="toc-building"><a href="#building-4-septic-phagelair">Septic Phagelair</a></li>
+<li class="toc-building"><a href="#building-5-sporulation-cultivator">Sporulation Cultivator</a></li>
+<li class="toc-building"><a href="#building-6-concoction-chamber">Concoction Chamber</a></li>
+<li class="toc-building"><a href="#building-7-cult-magus-chambers">Cult Magus Chambers</a></li>
+<li class="toc-building"><a href="#building-8-rite-of-summoning">Rite of Summoning</a></li>
+<li class="toc-building"><a href="#building-9-cult-magus-clinic">Cult Magus Clinic</a></li>
+<li class="toc-building"><a href="#building-10-cult-magus-plague-colony">Cult Magus Plague Colony</a></li>
+<li class="toc-building"><a href="#building-11-fulcrum-of-virulence">Fulcrum of Virulence</a></li>
+<li class="toc-building"><a href="#building-12-exaltation-of-fleshy-masses">Exaltation of Fleshy Masses</a></li>
+<li class="toc-building"><a href="#building-13-endemic-gardens">Endemic Gardens</a></li>
+<li class="toc-building"><a href="#building-14-fester-node">Fester Node</a></li>
+<li class="toc-building"><a href="#building-15-plagueling-s-portal">Plagueling&#39;s Portal</a></li>
+<li class="toc-building"><a href="#building-16-harvest-of-spoils">Harvest of Spoils</a></li>
+<li class="toc-building"><a href="#building-17-herald-of-the-apocalypse">Herald of the Apocalypse</a></li>
 </ul>
 </aside>
 <div class="report-content">
 <header class="report-header" id="summary">
-<h1>Nurgle Cult Buildings</h1>
+<h1><span class="heading-text">Nurgle Cult Buildings</span></h1>
 <p class="report-note">Generated from DB and localization data.</p>
 <ul class="report-meta">
-<li><strong>Generated:</strong> 2026-05-09 23:31:24 -05:00</li>
+<li><strong>Generated:</strong> 2026-06-01 15:18:16 -05:00</li>
 <li><strong>Sources:</strong> Mod overlay + vanilla</li>
 <li><strong>Buildings:</strong> 17</li>
 </ul>
 </header>
 <section class="building-list" aria-label="Buildings">
-<article class="building-card" id="building-wh3-main-nur-cult-1">
-<h2>Pox Weaver</h2>
+<article class="building-card" id="building-1-pox-weaver">
+<h2><span class="heading-text">Pox Weaver</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_nur_cult_1</code></li>
 <li><strong>Short Description:</strong> A whiff of fever, a soupcon of pustules, and buboes galore — that&#39;s how Grandfather&#39;s beloved maladies are woven.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Resource Cost: 200 Infections</li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Infections: -15 per turn</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When With at least 15 infections:</h3>
+<h3><span class="heading-text">With at least 15 infections:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">A random plague will be given to this settlement periodically</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague:</h3>
+<h3><span class="heading-text">When this settlement has a Plague:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Infections: 15 per turn</li>
+<li class="effect-item effect-item-green">Infections: +15 per turn</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Infections: 5 per turn</li>
+<li class="effect-item effect-item-green">Infections: +5 per turn</li>
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is below -50:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is below -50:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Infections: 5 per turn</li>
+<li class="effect-item effect-item-green">Infections: +5 per turn</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-nur-cult-2">
-<h2>Pathogen Propagator</h2>
+<article class="building-card" id="building-2-pathogen-propagator">
+<h2><span class="heading-text">Pathogen Propagator</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_nur_cult_2</code></li>
 <li><strong>Short Description:</strong> As pathogens spread, the energy and determination granted to Nurgle&#39;s afflicted servants is given as a twisted solace.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult (CULT) via wh3_main_nur_cult</li>
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Chance of a plague spreading: +15% (local region)</li>
-<li class="effect-item effect-item-green">Infections: 5 per turn</li>
+<li class="effect-item effect-item-green">Infections: +5 per turn</li>
 <li class="effect-item effect-item-green">Nurgle corruption: +3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague:</h3>
+<h3><span class="heading-text">When this settlement has a Plague:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Income generated: 75</li>
-<li class="effect-item effect-item-green">Infections: 5 per turn</li>
+<li class="effect-item effect-item-green">Infections: +5 per turn</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Income generated: 75</li>
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is below -50:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is below -50:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Chance of a plague spreading: +15% (local region)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-nur-cult-3">
-<h2>Virality Mutator</h2>
+<article class="building-card" id="building-3-virality-mutator">
+<h2><span class="heading-text">Virality Mutator</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_nur_cult_3</code></li>
 <li><strong>Short Description:</strong> Those lavished with Nurgle&#39;s blessings may become masses of puss-filled flesh, seeping new contagions. A great honor indeed.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult (CULT) via wh3_main_nur_cult</li>
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Infections: 5 per turn</li>
+<li class="effect-item effect-item-green">Infections: +5 per turn</li>
 <li class="effect-item effect-item-green">Plague immunity duration: -1 turns (local region)</li>
 <li class="effect-item effect-item-green">Nurgle corruption: +3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is below -50:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is below -50:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Plague immunity duration: -2 turns (local region)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague:</h3>
+<h3><span class="heading-text">When this settlement has a Plague:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Income generated: 75</li>
-<li class="effect-item effect-item-green">Infections: 5 per turn</li>
+<li class="effect-item effect-item-green">Infections: +5 per turn</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Income generated: 75</li>
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-nur-cult-4">
-<h2>Septic Phagelair</h2>
+<article class="building-card" id="building-4-septic-phagelair">
+<h2><span class="heading-text">Septic Phagelair</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_nur_cult_4</code></li>
 <li><strong>Short Description:</strong> The noxious fumes of decay are particularly ripe here, preparing the populace to accept even more of the Urfather&#39;s love.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult (CULT) via wh3_main_nur_cult</li>
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Resource Cost: 100 Infections</li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption: +3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague:</h3>
+<h3><span class="heading-text">When this settlement has a Plague:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Garrison hit points: -20%</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Garrison hit points: -20%</li>
 <li class="effect-item effect-item-red">+5% chance to reveal cult to settlement owner per non-allied Hero present</li>
@@ -434,148 +473,153 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is below -50:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is below -50:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Garrison hit points: -20%</li>
 <li class="effect-item effect-item-red">+5% chance to reveal cult to settlement owner per non-allied Hero present</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-nur-cult-corruption-1">
-<h2>Sporulation Cultivator</h2>
+<article class="building-card" id="building-5-sporulation-cultivator">
+<h2><span class="heading-text">Sporulation Cultivator</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_nur_cult_corruption_1</code></li>
 <li><strong>Short Description:</strong> From the primordia of the dead and dying, Nurgle&#39;s cultivations bloom; taking to the winds to begin the cycle anew.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult (CULT) via wh3_main_nur_cult</li>
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption: +5</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague:</h3>
+<h3><span class="heading-text">When this settlement has a Plague:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption: +5</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption in adjacent provinces: +3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-nur-cult-corruption-2">
-<h2>Concoction Chamber</h2>
+<article class="building-card" id="building-6-concoction-chamber">
+<h2><span class="heading-text">Concoction Chamber</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_nur_cult_corruption_2</code></li>
 <li><strong>Short Description:</strong> In this foetid chamber, despair is rendered down into contagion, nursed in secret until it is virulent enough to spread.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult (CULT) via wh3_main_nur_cult</li>
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption: +5</li>
 <li class="effect-item effect-item-red">Infections: -10 per turn</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When With at least 10 infections:</h3>
+<h3><span class="heading-text">With at least 10 infections:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Infection cost to create a Plague: -1% (factionwide)</li>
+<li class="effect-item effect-item-green">Infection cost to create a Plague: -1% (factionwide for cult owner)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Infections: 10 per turn</li>
+<li class="effect-item effect-item-green">Infections: +10 per turn</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-nur-cult-magus">
-<h2>Cult Magus Chambers</h2>
+<article class="building-card" id="building-7-cult-magus-chambers">
+<h2><span class="heading-text">Cult Magus Chambers</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_nur_cult_magus</code></li>
 <li><strong>Short Description:</strong> From hidden chambers, the Cult Magus gathers the sick, the shunned, and the despairing, offering solace in Grandfather’s embrace.</li>
-<li><strong>Upgrades To:</strong> Cult Magus Clinic, Cult Magus Plague Colony, Herald of the Apocalypse</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +20</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+20</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption: +5</li>
 <li class="effect-item effect-item-green">+15% chance per turn to establish a cult in an adjacent region</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Hero capacity: +1 for Cultists</li>
 <li class="effect-item effect-item-green">+5% chance per turn to establish a cult in an adjacent region</li>
@@ -584,118 +628,126 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-nur-cult-teleport">
-<h2>Rite of Summoning</h2>
+<article class="building-card" id="building-8-rite-of-summoning">
+<h2><span class="heading-text">Rite of Summoning</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_nur_cult_teleport</code></li>
 <li><strong>Short Description:</strong> The cult gives itself utterly, thinning the veil with filth and prayer until their lord may step through the festering wound.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult (CULT) via wh3_main_nur_cult</li>
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
+</ul>
+</section>
+<section class="stats-section">
+<h3><span class="heading-text">Building Stats</span></h3>
+<ul class="stat-list">
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>2</code></li>
+<li>Resource Cost: 200 Infections</li>
+<li>Restrictions: Faction unique</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Cult is removed</li>
 <li class="effect-item effect-item-green">Instantly transports your faction leader to this settlement</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-nur-cult-magus-doctor">
-<h2>Cult Magus Clinic</h2>
+<article class="building-card" id="building-9-cult-magus-clinic">
+<h2><span class="heading-text">Cult Magus Clinic</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_nur_cult_magus_doctor</code></li>
 <li><strong>Short Description:</strong> The new doctor is an unassuming, humble, and jovial sort that puts their patients at ease, even if some of them get much, much worse...</li>
-<li><strong>Upgrades From:</strong> Cult Magus Chambers, Cult Magus Plague Colony, Herald of the Apocalypse</li>
-<li><strong>Upgrades To:</strong> Cult Magus Plague Colony, Herald of the Apocalypse</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: -10</li>
+<li>Tier: <code>2</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>-10</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">+10% chance per turn to establish a cult in an adjacent region</li>
 <li class="effect-item effect-item-green">Hero action success chance: +10% (cult owner Heroes in local and adjacent regions)</li>
 <li class="effect-item effect-item-green">Income generated: 150</li>
-<li class="effect-item effect-item-green">Nurgle corruption: +2</li>
+<li class="effect-item effect-item-green">Nurgle corruption: +3</li>
 <li class="effect-item effect-item-red">Plague immunity duration: +2 turns (local region)</li>
 <li class="effect-item effect-item-red">Chance of a plague spreading: -15% (local region)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Hero capacity: +1 for Cultists</li>
 <li class="effect-item effect-item-green">+5% chance per turn to establish a cult in an adjacent region</li>
 <li class="effect-item effect-item-green">Unlocks Hero recruitment: Cultist of Nurgle</li>
-<li class="effect-item effect-item-green">Nurgle corruption in adjacent provinces: +3</li>
+<li class="effect-item effect-item-green">Nurgle corruption in adjacent provinces: +5</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague:</h3>
+<h3><span class="heading-text">When this settlement has a Plague:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Income generated: 200</li>
-<li class="effect-item effect-item-green">Infections: 5 per turn</li>
+<li class="effect-item effect-item-green">Infections: +5 per turn</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-nur-cult-magus-plague-colony">
-<h2>Cult Magus Plague Colony</h2>
+<article class="building-card" id="building-10-cult-magus-plague-colony">
+<h2><span class="heading-text">Cult Magus Plague Colony</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_nur_cult_magus_plague_colony</code></li>
 <li><strong>Short Description:</strong> Deep in the foulest pits of squalor, hidden amongst the poor, diseased, and despairing, His servants bring salvation.</li>
-<li><strong>Upgrades From:</strong> Cult Magus Chambers, Cult Magus Clinic, Herald of the Apocalypse</li>
-<li><strong>Upgrades To:</strong> Cult Magus Clinic, Herald of the Apocalypse</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: -20</li>
+<li>Tier: <code>2</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>-20</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Infections: 10 per turn</li>
+<li class="effect-item effect-item-green">Infections: +10 per turn</li>
 <li class="effect-item effect-item-green">Nurgle corruption: +5</li>
 <li class="effect-item effect-item-red">Visibility over the region is lost</li>
 <li class="effect-item effect-item-green">Hero self-defence: +20% chance of wounding aggressors (cult owner Heroes in province)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">+10% chance per turn to establish a cult in an adjacent region</li>
 <li class="effect-item effect-item-green">Hero capacity: +1 for Plagueridden</li>
@@ -705,46 +757,48 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague:</h3>
+<h3><span class="heading-text">When this settlement has a Plague:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Income generated: 200</li>
-<li class="effect-item effect-item-green">Infections: 5 per turn</li>
+<li class="effect-item effect-item-green">Infections: +5 per turn</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-nur-cult-magus-fulcrum-plagues">
-<h2>Fulcrum of Virulence</h2>
+<article class="building-card" id="building-11-fulcrum-of-virulence">
+<h2><span class="heading-text">Fulcrum of Virulence</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_nur_cult_magus_fulcrum_plagues</code></li>
 <li><strong>Short Description:</strong> Dedicate the surrounding lands to the endless wonder and evolution of pestiliential life, and receive Grandfather&#39;s blessings.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +50</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Resource Cost: 100 Infections</li>
+<li>Discoverability: <code>+50</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Acts as a Ritual Fulcrum for Ritual Anchors in adjacent regions</li>
 <li class="effect-item effect-item-green">Plague immunity duration: -1 turns (local region)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more and Ritual Fulcrum is active:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Blessed Symptoms when generating plagues: +2</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Ritual Anchors are constructed in all adjacent regions:</h3>
+<h3><span class="heading-text">When Ritual Anchors are constructed in all adjacent regions:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption: +5</li>
 <li class="effect-item effect-item-green">Nurgle corruption in adjacent provinces: +5</li>
@@ -753,50 +807,52 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague and Ritual Fulcrum is active:</h3>
+<h3><span class="heading-text">When this settlement has a Plague and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Infections: 15 per turn</li>
+<li class="effect-item effect-item-green">Infections: +15 per turn</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-nur-cult-magus-fulcrum-daemons">
-<h2>Exaltation of Fleshy Masses</h2>
+<article class="building-card" id="building-12-exaltation-of-fleshy-masses">
+<h2><span class="heading-text">Exaltation of Fleshy Masses</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_nur_cult_magus_fulcrum_daemons</code></li>
 <li><strong>Short Description:</strong> A leeching rot infects the land, blessing the inhabitants with decay, and the Urfather&#39;s children with festering might.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +50</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Resource Cost: 100 Infections</li>
+<li>Discoverability: <code>+50</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Acts as a Ritual Fulcrum for Ritual Anchors in adjacent regions</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Ritual Anchors are constructed in all adjacent regions:</h3>
+<h3><span class="heading-text">When Ritual Anchors are constructed in all adjacent regions:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Activates this Ritual Fulcrum</li>
 <li class="effect-item effect-item-green">Nurgle corruption in adjacent provinces: +5</li>
@@ -804,13 +860,13 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague and Ritual Fulcrum is active:</h3>
+<h3><span class="heading-text">When this settlement has a Plague and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Upkeep: -5% for Nurgle Daemon units (cult owner armies factionwide)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more and Ritual Fulcrum is active:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Leadership: +3 for Nurgle Daemon units (cult owner armies factionwide)</li>
 <li class="effect-item effect-item-green">Physical resistance: +3% for Nurgle Daemon units (cult owner armies factionwide)</li>
@@ -820,44 +876,46 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-nur-cult-magus-fulcrum-garden">
-<h2>Endemic Gardens</h2>
+<article class="building-card" id="building-13-endemic-gardens">
+<h2><span class="heading-text">Endemic Gardens</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_nur_cult_magus_fulcrum_garden</code></li>
 <li><strong>Short Description:</strong> Everything the blight touches is His kingdom, a putrid garden for His children to frolic and fester in.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +50</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Resource Cost: 100 Infections</li>
+<li>Discoverability: <code>+50</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Acts as a Ritual Fulcrum for Ritual Anchors in adjacent regions</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Ritual Anchors are constructed in all adjacent regions:</h3>
+<h3><span class="heading-text">When Ritual Anchors are constructed in all adjacent regions:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption in adjacent provinces: +5</li>
 <li class="effect-item effect-item-green">Nurgle corruption: +5</li>
@@ -866,165 +924,187 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more and Ritual Fulcrum is active:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Attrition: +100% casualties suffered from Nurgle territory attrition (cult owner armies in local and adjacent regions)</li>
-<li class="effect-item effect-item-red">Campaign movement range for non-allied armies: -50% (local and adjacent regions)</li>
+<li class="effect-item effect-item-red">Campaign movement range for non-allied armies: -25% (all own and foreign armies in region)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When this settlement has a Plague and Ritual Fulcrum is active:</h3>
+<h3><span class="heading-text">When this settlement has a Plague and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Enables Nurgle territory attrition (all armies in local and adjacent regions)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-nur-cult-ritual-anchor">
-<h2>Fester Node</h2>
+<article class="building-card" id="building-14-fester-node">
+<h2><span class="heading-text">Fester Node</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_nur_cult_ritual_anchor</code></li>
 <li><strong>Short Description:</strong> Seeping with foul energies, these nodes converge and direct putrefying power across vast distances, to unknown ends...</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult (CULT) via wh3_main_nur_cult</li>
+<li>Basic Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Acts as a Ritual Anchor for Ritual Fulcrums in adjacent regions</li>
 <li class="effect-item effect-item-green">Nurgle corruption: +3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is below -50:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is below -50:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption: +3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">+5% chance to reveal cult to settlement owner per non-allied Hero present</li>
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">+5% chance to reveal cult to settlement owner per non-allied Hero present</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-nur-cult-teleport-cultist">
-<h2>Plagueling&#39;s Portal</h2>
+<article class="building-card" id="building-15-plagueling-s-portal">
+<h2><span class="heading-text">Plagueling&#39;s Portal</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_nur_cult_teleport_cultist</code></li>
 <li><strong>Short Description:</strong> A single step can take you to one of Grandfather’s many gardens, and the next may bear you where He has need of you.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult (CULT) via wh3_main_nur_cult</li>
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
+</ul>
+</section>
+<section class="stats-section">
+<h3><span class="heading-text">Building Stats</span></h3>
+<ul class="stat-list">
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Restrictions: Faction unique</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When 1 or more own Plague Cultist Heroes exist:</h3>
+<h3><span class="heading-text">When 1 or more own Plague Cultist Heroes exist:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Instantly transports the nearest Plague Cultist Hero to this settlement</li>
 <li class="effect-item effect-item-red">Building is destroyed</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-nur-cult-ancillary-smith">
-<h2>Harvest of Spoils</h2>
+<article class="building-card" id="building-16-harvest-of-spoils">
+<h2><span class="heading-text">Harvest of Spoils</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_nur_cult_ancillary_smith</code></li>
 <li><strong>Short Description:</strong> Though perilous, a pilgrimage through the Urfather’s voracious fields of rot can yield promising oddities. With effort, and His blessing, they may yet be returned to the cycle.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
 <li>Upkeep: <code>300</code></li>
-<li>Discoverability: +40</li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Building is destroyed upon awarding an item</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">+10% chance per turn to gain a random Armour or Enchanted Item of up to Uncommon quality</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">+25% chance to gain a random Armour or Enchanted Item of up to Uncommon quality upon successful hero action (cult owner Heroes in province)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">25% chance to gain a random Armour or Enchanted Item of up to Uncommon quality upon successful hero action (cult owner Heroes in province)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not stack.</p>
+</details>
+</li>
 <li class="effect-item effect-item-green">Gain a random beneficial trait upon hero action awarding an item when hero&#39;s region has plague (cult owner Heroes in province)</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-nur-cult-magus-herald-of-apocalypse">
-<h2>Herald of the Apocalypse</h2>
+<article class="building-card" id="building-17-herald-of-the-apocalypse">
+<h2><span class="heading-text">Herald of the Apocalypse</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_nur_cult_magus_herald_of_apocalypse</code></li>
 <li><strong>Short Description:</strong> They will despair as their bodies bloat and rupture, they all do at first, but our Dark God will soon show mercy and accept them into his fetid embrace.</li>
-<li><strong>Upgrades From:</strong> Cult Magus Chambers, Cult Magus Clinic, Cult Magus Plague Colony</li>
-<li><strong>Upgrades To:</strong> Cult Magus Plague Colony, Cult Magus Clinic</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_nur_cult_magus (CULT) via wh3_main_nur_cult_magus [starts with wh3_main_nur_cult_magus]</li>
+<li>Magus Cult</li>
+</ul>
+</section>
+<section class="stats-section">
+<h3><span class="heading-text">Building Stats</span></h3>
+<ul class="stat-list">
+<li>Tier: <code>2</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Nurgle corruption: +5</li>
 <li class="effect-item effect-item-green">Hero action success chance: +15% (cult owner Heroes in local and adjacent regions)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Hero capacity: +1 for Cultists</li>
 <li class="effect-item effect-item-green">Unlocks Hero recruitment: Cultist of Nurgle</li>
@@ -1034,20 +1114,20 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 100 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 100 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Enables replenishment in foreign territory (cult owner armies in local and adjacent regions)</li>
 <li class="effect-item effect-item-green">Passive ability: &quot;Festering Gate&quot; (cult owner armies in local and adjacent regions)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more and Control is more than -75:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more and Control is more than -75:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -2</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Nurgle corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Nurgle corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Growth: -20</li>
 </ul>

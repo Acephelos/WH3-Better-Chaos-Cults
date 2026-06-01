@@ -6,21 +6,27 @@
     <title>Khorne Cult Buildings</title>
     <style>
         :root {
-            --bg: #101315;
-            --panel: #1a2024;
-            --panel-soft: #20282d;
-            --panel-strong: #263038;
-            --text: #eee8dc;
-            --muted: #abb3ad;
-            --line: #3d4850;
-            --line-soft: #2f3940;
-            --accent: #d9a24c;
-            --accent-alt: #77b6a8;
+            --bg: #130f0f;
+            --panel: #1d1716;
+            --panel-soft: #271c1a;
+            --panel-strong: #34211d;
+            --text: #f1e8df;
+            --muted: #b7aaa2;
+            --line: #4b3934;
+            --line-soft: #382a27;
+            --accent: #d74f3f;
+            --accent-alt: #d7a24a;
+            --heading-gradient-start: #d74f3f;
+            --heading-gradient-end: #d74f3f;
             --effect-green: #7fbf88;
             --effect-red: #d47870;
-            --effect-gold: #d9a24c;
+            --effect-gold: #d7a24a;
             --effect-teal: #77b6a8;
-            --code-bg: #0b0d0f;
+            --code-bg: #0d0909;
+            --code-text: #f6dcc9;
+            --meta-strong: #f2c89a;
+            --heading-muted: #dfbca4;
+            --effect-group-bg: rgba(52, 33, 29, 0.42);
         }
         * { box-sizing: border-box; }
         html { scroll-padding-top: 14px; }
@@ -98,6 +104,16 @@
             font-size: clamp(1.7rem, 2.5vw, 2.45rem);
             line-height: 1.15;
         }
+        @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+            .heading-text {
+                display: inline-block;
+                color: transparent;
+                background: linear-gradient(180deg, var(--heading-gradient-start), var(--heading-gradient-end));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
         .report-note {
             margin: 0 0 10px;
             color: var(--muted);
@@ -107,7 +123,7 @@
             padding-left: 1.1rem;
         }
         .report-meta li + li, .building-meta li + li { margin-top: 2px; }
-        .report-meta strong, .building-meta strong { color: #f0d5a9; }
+        .report-meta strong, .building-meta strong { color: var(--meta-strong); }
         .building-card {
             padding: 15px 16px;
             scroll-margin-top: 14px;
@@ -121,7 +137,7 @@
         }
         .building-card h3 {
             margin: 0 0 6px;
-            color: #d9c7ad;
+            color: var(--heading-muted);
             font-size: 1.02rem;
             line-height: 1.25;
         }
@@ -135,14 +151,14 @@
             overflow: hidden;
             border: 1px solid var(--line-soft);
             border-radius: 7px;
-            background: rgba(32, 40, 45, 0.42);
+            background: var(--effect-group-bg);
         }
         .effect-group h3 {
             margin: 0;
             padding: 8px 11px;
             border-bottom: 1px solid var(--line-soft);
             background: var(--panel-strong);
-            color: #d9c7ad;
+            color: var(--heading-muted);
         }
         .plain-list, .slot-list, .stat-list, .effect-list {
             margin: 0;
@@ -160,6 +176,21 @@
             border-radius: 6px;
             background: var(--panel-soft);
         }
+        .effect-text { margin: 0; }
+        .effect-detail {
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+        .effect-detail summary {
+            cursor: pointer;
+            color: var(--accent-alt);
+            font-weight: 700;
+            line-height: 1.25;
+        }
+        .effect-detail p {
+            margin: 5px 0 0;
+        }
         .effect-item-green { border-left-color: var(--effect-green); }
         .effect-item-red { border-left-color: var(--effect-red); }
         .effect-item-gold { border-left-color: var(--effect-gold); }
@@ -168,7 +199,7 @@
             padding: 0.08em 0.28em;
             border-radius: 4px;
             background: var(--code-bg);
-            color: #f4e6cf;
+            color: var(--code-text);
             font-family: Consolas, Courier New, monospace;
             font-size: 0.93em;
             overflow-wrap: anywhere;
@@ -197,202 +228,235 @@
 <main class="page">
 <div class="layout">
 <aside class="toc" aria-label="Contents">
-<h2>Contents</h2>
+<h2><span class="heading-text">Contents</span></h2>
 <ul class="toc-list">
 <li><a href="#summary">Summary</a></li>
-<li class="toc-building"><a href="#building-wh3-main-kho-cult-1">Murderer’s Conclave</a></li>
-<li class="toc-building"><a href="#building-wh3-main-kho-cult-2">Pit Fighter&#39;s Arena</a></li>
-<li class="toc-building"><a href="#building-wh3-main-kho-cult-3">Merciless Doctrine</a></li>
-<li class="toc-building"><a href="#building-wh3-main-kho-cult-corruption-1">Blood God&#39;s Altar</a></li>
-<li class="toc-building"><a href="#building-wh3-main-kho-cult-corruption-2">Restless Warhands</a></li>
-<li class="toc-building"><a href="#building-wh3-main-kho-cult-magus">Cult Magus Chambers</a></li>
-<li class="toc-building"><a href="#building-wh3-main-kho-cult-special">Blood-Debts</a></li>
-<li class="toc-building"><a href="#building-wh3-main-kho-cult-teleport">Rite of Summoning</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-kho-cult-ritual-anchor">Brass Skull Altar</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-kho-cult-ritual-fulcrum-riots">Rage Unbound</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-kho-cult-ritual-fulcrum-destruction">Devastation Unending</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-kho-cult-ritual-fulcrum-daemons">Exaltation of Slaughter</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-kho-cult-magus-abattoir">Cult Magus Abattoir</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-kho-cult-magus-herald-of-apocalypse">Herald of the Apocalypse</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-kho-cult-magus-swords-for-hire">Bloodied Blades</a></li>
-<li class="toc-building"><a href="#building-ace-mcc-kho-cult-summon-blood-host">Skulls for the Skull Throne</a></li>
+<li class="toc-building"><a href="#building-1-murderer-s-conclave">Murderer’s Conclave</a></li>
+<li class="toc-building"><a href="#building-2-pit-fighter-s-arena">Pit Fighter&#39;s Arena</a></li>
+<li class="toc-building"><a href="#building-3-merciless-doctrine">Merciless Doctrine</a></li>
+<li class="toc-building"><a href="#building-4-blood-god-s-altar">Blood God&#39;s Altar</a></li>
+<li class="toc-building"><a href="#building-5-restless-warhands">Restless Warhands</a></li>
+<li class="toc-building"><a href="#building-6-cult-magus-chambers">Cult Magus Chambers</a></li>
+<li class="toc-building"><a href="#building-7-blood-debts">Blood-Debts</a></li>
+<li class="toc-building"><a href="#building-8-rite-of-summoning">Rite of Summoning</a></li>
+<li class="toc-building"><a href="#building-9-brass-skull-altar">Brass Skull Altar</a></li>
+<li class="toc-building"><a href="#building-10-rage-unbound">Rage Unbound</a></li>
+<li class="toc-building"><a href="#building-11-devastation-unending">Devastation Unending</a></li>
+<li class="toc-building"><a href="#building-12-exaltation-of-slaughter">Exaltation of Slaughter</a></li>
+<li class="toc-building"><a href="#building-13-cult-magus-abattoir">Cult Magus Abattoir</a></li>
+<li class="toc-building"><a href="#building-14-herald-of-the-apocalypse">Herald of the Apocalypse</a></li>
+<li class="toc-building"><a href="#building-15-bloodied-blades">Bloodied Blades</a></li>
+<li class="toc-building"><a href="#building-16-skulls-for-the-skull-throne">Skulls for the Skull Throne</a></li>
+<li class="toc-building"><a href="#building-17-ritual-of-blood">Ritual of Blood</a></li>
 </ul>
 </aside>
 <div class="report-content">
 <header class="report-header" id="summary">
-<h1>Khorne Cult Buildings</h1>
+<h1><span class="heading-text">Khorne Cult Buildings</span></h1>
 <p class="report-note">Generated from DB and localization data.</p>
 <ul class="report-meta">
-<li><strong>Generated:</strong> 2026-05-12 20:18:07 -05:00</li>
+<li><strong>Generated:</strong> 2026-06-01 15:17:44 -05:00</li>
 <li><strong>Sources:</strong> Mod overlay + vanilla</li>
-<li><strong>Buildings:</strong> 16</li>
+<li><strong>Buildings:</strong> 17</li>
 </ul>
 </header>
 <section class="building-list" aria-label="Buildings">
-<article class="building-card" id="building-wh3-main-kho-cult-1">
-<h2>Murderer’s Conclave</h2>
+<article class="building-card" id="building-1-murderer-s-conclave">
+<h2><span class="heading-text">Murderer’s Conclave</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_kho_cult_1</code></li>
 <li><strong>Short Description:</strong> Those with murder in their hearts are gathered in secret, taught to make each killing an offering, and each skull a tithe to the Blood God.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult (CULT) via wh3_main_kho_cult</li>
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +50</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+50</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +3</li>
 <li class="effect-item effect-item-red">Control: -3</li>
-<li class="effect-item effect-item-green">Skulls: 8 per turn</li>
+<li class="effect-item effect-item-green">Skulls: +8 per turn</li>
 <li class="effect-item effect-item-red">Growth: -10</li>
-<li class="effect-item effect-item-green">+15% chance to gain a random beneficial trait upon successful destructive or lethal hero action (cult owner Heroes in province)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">20% chance to gain a random beneficial trait upon successful destructive or lethal hero action (cult owner Heroes in province)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not stack, and only applies to Hero actions that result in destruction, loss of life, or assassination attempts.</p>
+</details>
+</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
-<li class="effect-item effect-item-green">Skulls: 8 per turn</li>
+<li class="effect-item effect-item-green">Skulls: +8 per turn</li>
 <li class="effect-item effect-item-red">Growth: -10</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is negative:</h3>
+<h3><span class="heading-text">When Control is negative:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
-<li class="effect-item effect-item-green">Skulls: 8 per turn</li>
+<li class="effect-item effect-item-green">Skulls: +8 per turn</li>
 <li class="effect-item effect-item-red">Growth: -10</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-kho-cult-2">
-<h2>Pit Fighter&#39;s Arena</h2>
+<article class="building-card" id="building-2-pit-fighter-s-arena">
+<h2><span class="heading-text">Pit Fighter&#39;s Arena</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_kho_cult_2</code></li>
 <li><strong>Short Description:</strong> Brutal contests are held here, each bloody spectacle — each taste of carnage — drawing the spectators ever deeper into bloodlust.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult (CULT) via wh3_main_kho_cult</li>
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +3</li>
-<li class="effect-item effect-item-green">Income gained from local settlement&#39;s income: 10%</li>
-<li class="effect-item effect-item-green">Recruit rank: +2 (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Income gained based on the local settlement&#39;s income: 10%</li>
+<li class="effect-item effect-item-green">Recruit rank: +2 for all units (region owner armies in province)</li>
 <li class="effect-item effect-item-green">Hero and Lord recruit rank: +2 (local province for region owner)</li>
-<li class="effect-item effect-item-green">+15% chance to gain a random Weapon or Armour of up to Uncommon quality upon successful destructive or lethal hero action (all Heroes in local province)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">20% chance to gain a random Weapon or Armour of up to Uncommon quality upon successful destructive or lethal hero action (all Heroes in local province)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not stack.</p>
+</details>
+</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is negative:</h3>
+<h3><span class="heading-text">When Control is negative:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is positive:</h3>
+<h3><span class="heading-text">When Control is positive:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Control: +3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 50 or more:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Income gained from local settlement&#39;s income: 10%</li>
+<li class="effect-item effect-item-green">Income gained based on the local settlement&#39;s income: 10%</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-kho-cult-3">
-<h2>Merciless Doctrine</h2>
+<article class="building-card" id="building-3-merciless-doctrine">
+<h2><span class="heading-text">Merciless Doctrine</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_kho_cult_3</code></li>
 <li><strong>Short Description:</strong> Edicts grow harsher and punishments bloodier, until the soldiery learn that mercy, cowardice, and retreat alike deserve only death upon the battlefield.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult (CULT) via wh3_main_kho_cult</li>
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +3</li>
-<li class="effect-item effect-item-green">Recruit rank: +2 (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Recruit rank: +2 for all units (region owner armies in province)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +4% (region owner armies in province)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Recruitment cost: +4% (region owner armies in province)</li>
-<li class="effect-item effect-item-red">Armies may not retreat from battle (region owner armies in province)</li>
+<li class="effect-item effect-item-red">Armies may not retreat from battle (region owner armies in local province)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is negative:</h3>
+<h3><span class="heading-text">When Control is negative:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 <li class="effect-item effect-item-red">Recruitment cost: +4% (region owner armies in province)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 50 or more:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Units recruited in this province have a permanent +10% melee attack bonus (local province for region owner)</li>
-<li class="effect-item effect-item-red">Units recruited in this province have a permanent -10% melee defence penalty (local province for region owner)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Units recruited in this province have a permanent +10% melee attack bonus (local province for region owner)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only applies to units recruited through standard local recruitment, not from other sources such as global recruitment or mercenary recruitment pools of any kind (such as Ogre Mercenaries, Regiments of Renown, etc).</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Units recruited in this province have a permanent -10% melee defence penalty (local province for region owner)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only applies to units recruited through standard local recruitment, not from other sources such as global recruitment or mercenary recruitment pools of any kind (such as Ogre Mercenaries, Regiments of Renown, etc).</p>
+</details>
+</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-kho-cult-corruption-1">
-<h2>Blood God&#39;s Altar</h2>
+<article class="building-card" id="building-4-blood-god-s-altar">
+<h2><span class="heading-text">Blood God&#39;s Altar</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_kho_cult_corruption_1</code></li>
 <li><strong>Short Description:</strong> Regular ministrations of fresh skulls and blood draw Khorne&#39;s influence to this place, stoking unholy fervor and fueling insatiable rage.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult (CULT) via wh3_main_kho_cult</li>
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +5</li>
 <li class="effect-item effect-item-green">Skulls: +160 each time a battle is fought in this province</li>
@@ -400,97 +464,106 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption in adjacent provinces: +5</li>
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is negative:</h3>
+<h3><span class="heading-text">When Control is negative:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
+<section class="effect-group">
+<h3><span class="heading-text">With Skull Throne mechanic:</span></h3>
+<ul class="effect-list">
+<li class="effect-item effect-item-green">Skulls sent to the Skull Throne: +16 per turn</li>
+</ul>
+</section>
 </article>
-<article class="building-card" id="building-wh3-main-kho-cult-corruption-2">
-<h2>Restless Warhands</h2>
+<article class="building-card" id="building-5-restless-warhands">
+<h2><span class="heading-text">Restless Warhands</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_kho_cult_corruption_2</code></li>
-<li><strong>Short Description:</strong> Denied a worthy foe, the garrison’s rage curdles into violence. Soon enough, idleness gives way to raids, reprisals, and bloodshed.</li>
+<li><strong>Short Description:</strong> Idle garrisons grow restless beneath Khorne’s gaze. Training drills and petty quarrels turn deadly, until bloodlust drives them to abandon their posts in search of battle.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult (CULT) via wh3_main_kho_cult</li>
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +3</li>
 <li class="effect-item effect-item-green">Garrison unit rank gain per turn: +1</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Garrison hit points: -15%</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Garrison hit points: -15%</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is negative:</h3>
+<h3><span class="heading-text">When Control is negative:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more and settlement owner is at war:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more and settlement owner is at war:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-gold">Garrison will periodically deploy to attack enemy settlements in adjacent regions</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more and settlement owner is not at war:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more and settlement owner is not at war:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-gold">Garrison will periodically deploy to raid Unfriendly settlements in adjacent regions</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-kho-cult-magus">
-<h2>Cult Magus Chambers</h2>
+<article class="building-card" id="building-6-cult-magus-chambers">
+<h2><span class="heading-text">Cult Magus Chambers</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_kho_cult_magus</code></li>
-<li><strong>Short Description:</strong> From hidden quarters, the Cult Magus orchestrates covert propagandists to spread teachings of his Dark God both profound and extraordinary.</li>
-<li><strong>Upgrades To:</strong> Cult Magus Abattoir, Herald of the Apocalypse, Bloodied Blades</li>
+<li><strong>Short Description:</strong> From hidden chambers, the Cult Magus gathers the wrathful and bloodstained, showing them how rage becomes strength, slaughter becomes worship, and every skull taken draws Khorne’s gaze.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +20</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+20</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +5</li>
 <li class="effect-item effect-item-green">+15% chance per turn to establish a cult in an adjacent region</li>
@@ -498,7 +571,7 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Hero capacity: +1 for Cultists</li>
 <li class="effect-item effect-item-green">+5% chance per turn to establish a cult in an adjacent region</li>
@@ -507,98 +580,110 @@
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-kho-cult-special">
-<h2>Blood-Debts</h2>
+<article class="building-card" id="building-7-blood-debts">
+<h2><span class="heading-text">Blood-Debts</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_kho_cult_special</code></li>
-<li><strong>Short Description:</strong> As the blood-feuds of those in power spiral endlessly, some among their armies find their true calling in the Blood God’s endless slaughter.</li>
+<li><strong>Short Description:</strong> As the blood-feuds of those in power spiral endlessly, some among their armies find their true calling beneath the Blood God’s gaze.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult (CULT) via wh3_main_kho_cult</li>
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +3</li>
 <li class="effect-item effect-item-green">Lord recruit rank: +1 (factionwide for region owner)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 25 or more and settlement owner is not at war:</h3>
+<h3><span class="heading-text">When Khorne corruption is 25 or more and settlement owner is not at war:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Worsens diplomatic relations between settlement owner and neighboring factions</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Recruitment cost: -4% for Khorne mortal units (cult owner armies factionwide)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is negative:</h3>
+<h3><span class="heading-text">When Control is negative:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When settlement owner is not at war:</h3>
+<h3><span class="heading-text">When settlement owner is not at war:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-wh3-main-kho-cult-teleport">
-<h2>Rite of Summoning</h2>
+<article class="building-card" id="building-8-rite-of-summoning">
+<h2><span class="heading-text">Rite of Summoning</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>wh3_main_kho_cult_teleport</code></li>
-<li><strong>Short Description:</strong> “Step forth, Lord, through the eternity between worlds, and return to us in the here and now…”</li>
+<li><strong>Short Description:</strong> When enough blood is spilled and skulls are piled high, the cult opens the way for its lord — with the cultists first to the slaughter, or first beneath it.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult (CULT) via wh3_main_kho_cult</li>
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
+</ul>
+</section>
+<section class="stats-section">
+<h3><span class="heading-text">Building Stats</span></h3>
+<ul class="stat-list">
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>2</code></li>
+<li>Resource Cost: 200 Skulls</li>
+<li>Restrictions: Faction unique</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Cult is removed</li>
 <li class="effect-item effect-item-green">Instantly transports your faction leader to this settlement</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-kho-cult-ritual-anchor">
-<h2>Brass Skull Altar</h2>
+<article class="building-card" id="building-9-brass-skull-altar">
+<h2><span class="heading-text">Brass Skull Altar</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_kho_cult_ritual_anchor</code></li>
 <li><strong>Short Description:</strong> Preserved in gleaming brass and consecrated with fresh blood, skulls thought to be pleasing to the Lord of Skulls are enshrined here to draw His favour.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult (CULT) via wh3_main_kho_cult</li>
+<li>Basic Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Acts as a Ritual Anchor for Ritual Fulcrums in adjacent regions</li>
 <li class="effect-item effect-item-red">Skulls: -8 per turn</li>
@@ -606,57 +691,65 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">With Skull Throne mechanic:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Skulls: 8 per turn</li>
+<li class="effect-item effect-item-green">Skulls sent to the Skull Throne: +8 per turn</li>
+</ul>
+</section>
+<section class="effect-group">
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
+<ul class="effect-list">
+<li class="effect-item effect-item-green">Skulls: +8 per turn</li>
 <li class="effect-item effect-item-red">+5% chance to reveal cult to settlement owner per non-allied Hero present</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is negative:</h3>
+<h3><span class="heading-text">When Control is negative:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 50 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">+5% chance to reveal cult to settlement owner per non-allied Hero present</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 50 or more and Ritual Fulcrum in adjacent region is active:</h3>
+<h3><span class="heading-text">When Khorne corruption is 50 or more and Ritual Fulcrum in adjacent region is active:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-kho-cult-ritual-fulcrum-riots">
-<h2>Rage Unbound</h2>
+<article class="building-card" id="building-10-rage-unbound">
+<h2><span class="heading-text">Rage Unbound</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_kho_cult_ritual_fulcrum_riots</code></li>
 <li><strong>Short Description:</strong> The laws of weaklings crack beneath a rising tide of fury. Once the first chains are broken, the streets remember only fire, blood, and iron.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Resource Cost: 300 Skulls</li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Acts as a Ritual Fulcrum for Ritual Anchors in adjacent regions</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Ritual Anchors are constructed in all adjacent regions:</h3>
+<h3><span class="heading-text">When Ritual Anchors are constructed in all adjacent regions:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +5</li>
 <li class="effect-item effect-item-green">Activates this Ritual Fulcrum</li>
@@ -665,39 +758,47 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more and Ritual Fulcrum is active:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -4</li>
-<li class="effect-item effect-item-red">+15% chance per turn per region to damage a random settlement building (local and adjacent regions)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">+15% chance per turn per region to damage a random settlement building (local and adjacent regions)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>If the randomly selected building is at or below 60% health, it will be dismantled.</p>
+</details>
+</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-kho-cult-ritual-fulcrum-destruction">
-<h2>Devastation Unending</h2>
+<article class="building-card" id="building-11-devastation-unending">
+<h2><span class="heading-text">Devastation Unending</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_kho_cult_ritual_fulcrum_destruction</code></li>
 <li><strong>Short Description:</strong> The Blood Hosts march tirelessly, leaving nothing but destruction and blood-soaked lands in their wake.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Resource Cost: 300 Skulls</li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Acts as a Ritual Fulcrum for Ritual Anchors in adjacent regions</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Ritual Anchors are constructed in all adjacent regions:</h3>
+<h3><span class="heading-text">When Ritual Anchors are constructed in all adjacent regions:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +5</li>
 <li class="effect-item effect-item-green">Activates this Ritual Fulcrum</li>
@@ -706,39 +807,41 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more and Ritual Fulcrum is active:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Turns until razed settlements can be colonised: +1</li>
 <li class="effect-item effect-item-green">Skulls cost: -10% for Blood for the Blood God occupation option used to create new Blood Hosts</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-kho-cult-ritual-fulcrum-daemons">
-<h2>Exaltation of Slaughter</h2>
+<article class="building-card" id="building-12-exaltation-of-slaughter">
+<h2><span class="heading-text">Exaltation of Slaughter</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_kho_cult_ritual_fulcrum_daemons</code></li>
 <li><strong>Short Description:</strong> This land will drown in slaughter. Its waters shall turn to blood, its blood shall boil, and its people shall offer Him soul and skull alike.</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: +40</li>
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Resource Cost: 200 Skulls</li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Acts as a Ritual Fulcrum for Ritual Anchors in adjacent regions</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Ritual Anchors are constructed in all adjacent regions:</h3>
+<h3><span class="heading-text">When Ritual Anchors are constructed in all adjacent regions:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Activates this Ritual Fulcrum</li>
 <li class="effect-item effect-item-red">Control: -3</li>
@@ -747,7 +850,7 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more and Ritual Fulcrum is active:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Recruit rank: +1 for Khorne Daemon units (cult owner armies factionwide)</li>
 <li class="effect-item effect-item-green">Leadership: +3 for Khorne Daemon units (cult owner armies factionwide)</li>
@@ -758,36 +861,37 @@
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-kho-cult-magus-abattoir">
-<h2>Cult Magus Abattoir</h2>
+<article class="building-card" id="building-13-cult-magus-abattoir">
+<h2><span class="heading-text">Cult Magus Abattoir</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_kho_cult_magus_abattoir</code></li>
 <li><strong>Short Description:</strong> Amid reeking gore and butchered flesh, the blood of livestock flows with that of vagabonds and drifters, in steady tribute to the Blood God.</li>
-<li><strong>Upgrades From:</strong> Cult Magus Chambers, Bloodied Blades, Herald of the Apocalypse</li>
-<li><strong>Upgrades To:</strong> Bloodied Blades, Herald of the Apocalypse</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: -10</li>
+<li>Tier: <code>2</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>-10</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Income generated: 150</li>
-<li class="effect-item effect-item-green">Skulls: 8 per turn</li>
+<li class="effect-item effect-item-green">Income generated: 160</li>
+<li class="effect-item effect-item-green">Skulls: +8 per turn</li>
 <li class="effect-item effect-item-green">+10% chance per turn to establish a cult in an adjacent region</li>
+<li class="effect-item effect-item-green">Khorne corruption: +3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">+5% chance per turn to establish a cult in an adjacent region</li>
 <li class="effect-item effect-item-green">Khorne corruption in adjacent provinces: +5</li>
@@ -796,83 +900,88 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is negative:</h3>
+<h3><span class="heading-text">When Control is negative:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-kho-cult-magus-herald-of-apocalypse">
-<h2>Herald of the Apocalypse</h2>
+<article class="building-card" id="building-14-herald-of-the-apocalypse">
+<h2><span class="heading-text">Herald of the Apocalypse</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_kho_cult_magus_herald_of_apocalypse</code></li>
 <li><strong>Short Description:</strong> “There are but two kinds of people: killers and cowards. When His legions arrive, no one can hide from what they truly are.”</li>
-<li><strong>Upgrades From:</strong> Cult Magus Chambers, Cult Magus Abattoir, Bloodied Blades</li>
-<li><strong>Upgrades To:</strong> Cult Magus Abattoir, Bloodied Blades</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Magus Cult</li>
+</ul>
+</section>
+<section class="stats-section">
+<h3><span class="heading-text">Building Stats</span></h3>
+<ul class="stat-list">
+<li>Tier: <code>2</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Khorne corruption: +5</li>
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Hero capacity: +1 for Cultists</li>
 <li class="effect-item effect-item-green">Unlocks Hero recruitment: Cultist of Khorne</li>
 <li class="effect-item effect-item-green">Khorne corruption in adjacent provinces: +5</li>
 <li class="effect-item effect-item-green">Hero capacity: +1 for Bloodreapers</li>
 <li class="effect-item effect-item-green">Unlocks Hero recruitment: Bloodreaper</li>
-<li class="effect-item effect-item-green">Chance of critical success: +15% (cult owner Heroes in local and adjacent regions)</li>
+<li class="effect-item effect-item-green">Hero action success chance: +15% (cult owner Heroes in local and adjacent regions)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 100 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 100 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Enables replenishment in foreign territory (cult owner armies in local and adjacent regions)</li>
 <li class="effect-item effect-item-green">Passive ability: &quot;Berserk&quot; (cult owner armies in local and adjacent regions)</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-kho-cult-magus-swords-for-hire">
-<h2>Bloodied Blades</h2>
+<article class="building-card" id="building-15-bloodied-blades">
+<h2><span class="heading-text">Bloodied Blades</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_kho_cult_magus_swords_for_hire</code></li>
 <li><strong>Short Description:</strong> Assassins, duelists, and hired killers pass as tools of coin and politics, yet the truest among them take payment in skulls as readily as gold.</li>
-<li><strong>Upgrades From:</strong> Cult Magus Chambers, Cult Magus Abattoir, Herald of the Apocalypse</li>
-<li><strong>Upgrades To:</strong> Cult Magus Abattoir, Herald of the Apocalypse</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Magus Cult</li>
 </ul>
 </section>
 <section class="stats-section">
-<h3>Building Stats</h3>
+<h3><span class="heading-text">Building Stats</span></h3>
 <ul class="stat-list">
-<li>Discoverability: -20</li>
+<li>Tier: <code>2</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+<li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>-20</code></li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>Base Effects</h3>
+<h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Chance of critical success: +10% (cult owner Heroes in local and adjacent regions)</li>
+<li class="effect-item effect-item-green">Hero action success chance: +10% (cult owner Heroes in local and adjacent regions)</li>
 <li class="effect-item effect-item-green">+5% chance per turn to establish a cult in an adjacent region</li>
 <li class="effect-item effect-item-green">Khorne corruption: +5</li>
 <li class="effect-item effect-item-green">Recruitment cost: -8% (region owner armies in province)</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Hero capacity: +1 for Exalted Heroes of Khorne</li>
 <li class="effect-item effect-item-green">Unlocks Hero recruitment: Exalted Hero of Khorne</li>
@@ -882,42 +991,78 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3>When settlement owner is not at war:</h3>
+<h3><span class="heading-text">When settlement owner is not at war:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">+5% chance per turn to establish a cult in an adjacent region</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is positive:</h3>
+<h3><span class="heading-text">When Control is positive:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Control: +3</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Control is negative:</h3>
+<h3><span class="heading-text">When Control is negative:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
 </ul>
 </section>
 </article>
-<article class="building-card" id="building-ace-mcc-kho-cult-summon-blood-host">
-<h2>Skulls for the Skull Throne</h2>
+<article class="building-card" id="building-16-skulls-for-the-skull-throne">
+<h2><span class="heading-text">Skulls for the Skull Throne</span></h2>
 <ul class="building-meta">
-<li><strong>Key:</strong> <code>ace_mcc_kho_cult_summon_blood_host</code></li>
 <li><strong>Short Description:</strong> BLOOD FOR THE BLOOD GOD! SKULLS FOR THE SKULL THRONE!</li>
 </ul>
 <section class="slot-section">
-<h3>Slot Sets</h3>
+<h3><span class="heading-text">Slot Sets</span></h3>
 <ul class="slot-list">
-<li>wh3_main_slot_set_kho_cult (CULT) via wh3_main_kho_cult</li>
-<li>wh3_main_slot_set_kho_cult_magus (CULT) via wh3_main_kho_cult_magus [starts with wh3_main_kho_cult_magus]</li>
+<li>Basic Cult</li>
+<li>Magus Cult</li>
+</ul>
+</section>
+<section class="stats-section">
+<h3><span class="heading-text">Building Stats</span></h3>
+<ul class="stat-list">
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>2</code></li>
+<li>Resource Cost: 1500 Skulls</li>
+<li>Restrictions: Faction unique</li>
 </ul>
 </section>
 <section class="effect-group">
-<h3>When Khorne corruption is 75 or more:</h3>
+<h3><span class="heading-text">When Khorne corruption is 75 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Cult is removed</li>
 <li class="effect-item effect-item-green">Summons a Blood Host</li>
+</ul>
+</section>
+</article>
+<article class="building-card" id="building-17-ritual-of-blood">
+<h2><span class="heading-text">Ritual of Blood</span></h2>
+<ul class="building-meta">
+<li><strong>Short Description:</strong> Khorne&#39;s warriors may be restored to full strength if the correct litanies be uttered at the appropriate juncture in battle.</li>
+</ul>
+<section class="slot-section">
+<h3><span class="heading-text">Slot Sets</span></h3>
+<ul class="slot-list">
+<li>Magus Cult</li>
+</ul>
+</section>
+<section class="stats-section">
+<h3><span class="heading-text">Building Stats</span></h3>
+<ul class="stat-list">
+<li>Tier: <code>1</code></li>
+<li>Construction Time (Turns): <code>1</code></li>
+</ul>
+</section>
+<section class="effect-group">
+<h3><span class="heading-text">Base Effects</span></h3>
+<ul class="effect-list">
+<li class="effect-item effect-item-red">Cult is destroyed upon building completion</li>
+<li class="effect-item effect-item-green">Instantly replenish all units (factionwide)</li>
+<li class="effect-item effect-item-red">Prevents other rituals from being started in this Cult</li>
+<li class="effect-item effect-item-gold">War will be declared on a random faction!</li>
 </ul>
 </section>
 </article>
