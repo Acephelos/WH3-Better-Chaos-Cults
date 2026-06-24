@@ -277,7 +277,7 @@
 <h1><span class="heading-text">Tzeentch Cult Buildings</span></h1>
 <p class="report-note">Generated from DB and localization data.</p>
 <ul class="report-meta">
-<li><strong>Generated:</strong> 2026-06-01 15:18:49 -05:00</li>
+<li><strong>Generated:</strong> 2026-06-23 20:10:14 -05:00</li>
 <li><strong>Sources:</strong> Mod overlay + vanilla</li>
 <li><strong>Buildings:</strong> 20</li>
 </ul>
@@ -329,42 +329,68 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -416,42 +442,68 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -483,8 +535,8 @@
 <h3><span class="heading-text">Base Effects</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-green">Control: +3</li>
-<li class="effect-item effect-item-green">Recruit rank: +1 (region owner armies provincewide)</li>
-<li class="effect-item effect-item-green">Recruitment cost: -12% (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Recruit rank: +1 (region owner armies in local province)</li>
+<li class="effect-item effect-item-green">Recruitment cost: -12% (region owner armies in local province)</li>
 <li class="effect-item effect-item-red">Prevents construction of Marshals of Madness</li>
 <li class="effect-item effect-item-green">Tzeentch corruption: +1</li>
 </ul>
@@ -492,48 +544,74 @@
 <section class="effect-group">
 <h3><span class="heading-text">When settlement income is 300 or more:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Local recruitment duration: -1 turn(s) (minimum 1) (region owner armies provincewide)</li>
+<li class="effect-item effect-item-green">Local recruitment duration: -1 turn(s) (minimum 1) (region owner armies in local province)</li>
 </ul>
 </section>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -557,7 +635,7 @@
 <li>Tier: <code>1</code></li>
 <li>Construction Time (Turns): <code>1</code></li>
 <li>Construction Cost: <code>750</code></li>
-<li>Discoverability: <code>+50</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
@@ -571,49 +649,75 @@
 <h3><span class="heading-text">When Tzeentch corruption is 50 or more:</span></h3>
 <ul class="effect-list">
 <li class="effect-item effect-item-red">Control: -3</li>
-<li class="effect-item effect-item-red">Recruitment cost: +12% (region owner armies in province)</li>
+<li class="effect-item effect-item-red">Recruitment cost: +12% (region owner armies in local province)</li>
 <li class="effect-item effect-item-red">Upkeep: +20% (region owner armies in local region)</li>
 </ul>
 </section>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -650,48 +754,80 @@
 <section class="effect-group">
 <h3><span class="heading-text">When region is inhabited:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Improves diplomatic relations between settlement owner and factions in adjacent regions over time (local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Improves diplomatic relations between settlement owner and factions in adjacent regions over time</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect applies every other turn, and only provides a moderate diplomatic bonus unless stacked.</p>
+</details>
+</li>
 </ul>
 </section>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -728,48 +864,80 @@
 <section class="effect-group">
 <h3><span class="heading-text">When region is inhabited:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-red">Worsens diplomatic relations between settlement owner and factions in adjacent regions over time (local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Worsens diplomatic relations between settlement owner and factions in adjacent regions over time</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect applies every other turn, and only provides a moderate diplomatic penalty unless stacked.</p>
+</details>
+</li>
 </ul>
 </section>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -819,51 +987,83 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Conspiracies</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Cult instantly expands to an adjacent region when purged</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Cult instantly expands to an adjacent region when purged</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
 <li class="effect-item effect-item-green">Cult will return within 9 turns when cult is purged</li>
-<li class="effect-item effect-item-red">A random character will gain a negative trait for some time when cult is purged (region owner characters in region)</li>
-<li class="effect-item effect-item-red">Minor diplomatic penalty with all known factions when cult is purged (region owner)</li>
+<li class="effect-item effect-item-red">A random character will gain a negative trait for some time when cult is purged (region owner characters in local region)</li>
+<li class="effect-item effect-item-red">Moderate diplomatic penalty with all known factions when cult is purged (region owner)</li>
 </ul>
 </details>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -912,7 +1112,7 @@
 <section class="effect-group">
 <h3><span class="heading-text">When settlement owner is corruptible:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">+9% chance for newly recruited wizard characters to gain a powerful trait that also spreads corruption (settlement owner)</li>
+<li class="effect-item effect-item-green">+9% chance for newly recruited wizard characters to gain a powerful trait that also spreads corruption (factionwide for region owner)</li>
 </ul>
 </section>
 <section class="effect-group">
@@ -925,42 +1125,68 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1069,42 +1295,68 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1154,42 +1406,68 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1239,42 +1517,68 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1315,16 +1619,11 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3><span class="heading-text">When Tzeentch corruption is 75 or more:</span></h3>
-<ul class="effect-list">
-<li class="effect-item effect-item-green">Tzeentch corruption in adjacent provinces: +5</li>
-</ul>
-</section>
-<section class="effect-group">
 <h3><span class="heading-text">When Tzeentch corruption is 75 or more and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
-<li class="effect-item effect-item-red">Campaign movement range for non-allied armies: -25% (all own and foreign armies in region)</li>
-<li class="effect-item effect-item-red">Campaign line of sight for non-allied armies: -70% (all own and foreign armies in region)</li>
+<li class="effect-item effect-item-green">Tzeentch corruption in adjacent provinces: +5</li>
+<li class="effect-item effect-item-red">Campaign movement range for non-allied armies: -25% (armies in local and adjacent regions)</li>
+<li class="effect-item effect-item-red">Campaign line of sight for non-allied armies: -70% (armies in local and adjacent regions)</li>
 <li class="effect-item effect-item-green">
 <div class="effect-text">33% chance to teleport non-allied armies to a random adjacent region after moving (adjacent regions)</div>
 <details class="effect-detail">
@@ -1333,48 +1632,80 @@
 </details>
 </li>
 <li class="effect-item effect-item-green">Gain a random Common or Uncommon item or 99 Grimoires when this building teleports a non-allied army</li>
-<li class="effect-item effect-item-green">Enables an additional cult Plot (local and adjacent regions)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Enables an additional cult Plot (local and adjacent regions)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not stack.</p>
+</details>
+</li>
 </ul>
 </section>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1397,7 +1728,7 @@
 <li>Tier: <code>1</code></li>
 <li>Construction Time (Turns): <code>1</code></li>
 <li>Resource Cost: 200 Grimoires</li>
-<li>Discoverability: <code>+50</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
@@ -1422,59 +1753,86 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3><span class="heading-text">When Tzeentch corruption is 75 or more:</span></h3>
-<ul class="effect-list">
-<li class="effect-item effect-item-green">Tzeentch corruption in adjacent provinces: +5</li>
-</ul>
-</section>
-<section class="effect-group">
 <h3><span class="heading-text">When Tzeentch corruption is 75 or more and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
+<li class="effect-item effect-item-green">Tzeentch corruption in adjacent provinces: +5</li>
 <li class="effect-item effect-item-green">Winds of Magic power reserve: +5 per turn (cult owner armies factionwide)</li>
-<li class="effect-item effect-item-red">Winds of Magic power reserve: -20 per turn for non-allied armies (all own and foreign armies in region)</li>
+<li class="effect-item effect-item-red">Winds of Magic power reserve: -20 per turn for non-allied armies (armies in local and adjacent regions)</li>
 <li class="effect-item effect-item-green">Changing of the Ways cost: -9% (factionwide)</li>
-<li class="effect-item effect-item-green">Enables an additional cult Plot (local and adjacent regions)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Enables an additional cult Plot (local and adjacent regions)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not stack.</p>
+</details>
+</li>
 </ul>
 </section>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1497,7 +1855,7 @@
 <li>Tier: <code>1</code></li>
 <li>Construction Time (Turns): <code>1</code></li>
 <li>Resource Cost: 200 Grimoires</li>
-<li>Discoverability: <code>+50</code></li>
+<li>Discoverability: <code>+40</code></li>
 </ul>
 </section>
 <section class="effect-group">
@@ -1516,19 +1874,20 @@
 </ul>
 </section>
 <section class="effect-group">
-<h3><span class="heading-text">When Tzeentch corruption is 75 or more:</span></h3>
-<ul class="effect-list">
-<li class="effect-item effect-item-green">Tzeentch corruption in adjacent provinces: +5</li>
-</ul>
-</section>
-<section class="effect-group">
 <h3><span class="heading-text">When Tzeentch corruption is 75 or more and Ritual Fulcrum is active:</span></h3>
 <ul class="effect-list">
+<li class="effect-item effect-item-green">Tzeentch corruption in adjacent provinces: +5</li>
 <li class="effect-item effect-item-green">Leadership: +3 for Tzeentch Daemon units (cult owner armies factionwide)</li>
 <li class="effect-item effect-item-green">Physical resistance: +3% for Tzeentch Daemon units (cult owner armies factionwide)</li>
 <li class="effect-item effect-item-green">Recruit rank: +1 for Tzeentch Daemon units (cult owner armies factionwide)</li>
-<li class="effect-item effect-item-green">Barrier hit points: +9% for Tzeentch Daemon units (cult owner armies factionwide)</li>
-<li class="effect-item effect-item-green">Enables an additional cult Plot (local and adjacent regions)</li>
+<li class="effect-item effect-item-green">Barrier hit points: +3% for Tzeentch Daemon units (cult owner armies factionwide)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Enables an additional cult Plot (local and adjacent regions)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not stack.</p>
+</details>
+</li>
 <li class="effect-item effect-item-green">Daemons Reforged: +10% chance for destroyed Daemons of Tzeentch units to be restored after battle (local and adjacent regions)</li>
 <li class="effect-item effect-item-green">Daemons Reforged: +10% hit points for destroyed Daemons of Tzeentch units restored after battle (local and adjacent regions)</li>
 </ul>
@@ -1536,42 +1895,68 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1620,42 +2005,68 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1709,51 +2120,83 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Conspiracies</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Cult instantly expands to an adjacent region when purged</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Cult instantly expands to an adjacent region when purged</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
 <li class="effect-item effect-item-green">Cult will return within 9 turns when cult is purged</li>
-<li class="effect-item effect-item-red">A random character will gain a negative trait for some time when cult is purged (region owner characters in region)</li>
-<li class="effect-item effect-item-red">Minor diplomatic penalty with all known factions when cult is purged (region owner)</li>
+<li class="effect-item effect-item-red">A random character will gain a negative trait for some time when cult is purged (region owner characters in local region)</li>
+<li class="effect-item effect-item-red">Moderate diplomatic penalty with all known factions when cult is purged (region owner)</li>
 </ul>
 </details>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1776,6 +2219,7 @@
 <li>Tier: <code>2</code></li>
 <li>Construction Time (Turns): <code>1</code></li>
 <li>Construction Cost: <code>750</code></li>
+<li>Discoverability: <code>-10</code></li>
 </ul>
 </section>
 <section class="effect-group">
@@ -1805,51 +2249,83 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Conspiracies</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Cult instantly expands to an adjacent region when purged</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Cult instantly expands to an adjacent region when purged</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
 <li class="effect-item effect-item-green">Cult will return within 9 turns when cult is purged</li>
-<li class="effect-item effect-item-red">A random character will gain a negative trait for some time when cult is purged (region owner characters in region)</li>
-<li class="effect-item effect-item-red">Minor diplomatic penalty with all known factions when cult is purged (region owner)</li>
+<li class="effect-item effect-item-red">A random character will gain a negative trait for some time when cult is purged (region owner characters in local region)</li>
+<li class="effect-item effect-item-red">Moderate diplomatic penalty with all known factions when cult is purged (region owner)</li>
 </ul>
 </details>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
@@ -1888,6 +2364,13 @@
 <li class="effect-item effect-item-green">Unlocks Hero recruitment: Exalted Hero of Tzeentch</li>
 <li class="effect-item effect-item-green">Hero capacity: +1 for Cultists</li>
 <li class="effect-item effect-item-green">Unlocks Hero recruitment: Cultist of Tzeentch</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Enables an additional cult Plot (local and adjacent regions)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not stack.</p>
+</details>
+</li>
 </ul>
 </section>
 <section class="effect-group">
@@ -1901,51 +2384,83 @@
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Conspiracies</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Cult instantly expands to an adjacent region when purged</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Cult instantly expands to an adjacent region when purged</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
 <li class="effect-item effect-item-green">Cult will return within 9 turns when cult is purged</li>
-<li class="effect-item effect-item-red">A random character will gain a negative trait for some time when cult is purged (region owner characters in region)</li>
-<li class="effect-item effect-item-red">Minor diplomatic penalty with all known factions when cult is purged (region owner)</li>
+<li class="effect-item effect-item-red">A random character will gain a negative trait for some time when cult is purged (region owner characters in local region)</li>
+<li class="effect-item effect-item-red">Moderate diplomatic penalty with all known factions when cult is purged (region owner)</li>
 </ul>
 </details>
 <details class="effect-group unlockable-group">
 <summary><span class="heading-text">Unlockable Plots</span></summary>
 <ul class="effect-list">
-<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Ward save: +9% when defending (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Attributes: Vanguard, Stalk, and Strider (cult owner armies in local region)</li>
 <li class="effect-item effect-item-green">A random cataclysm spell is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
-<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in region)</li>
-<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in region)</div>
+<div class="effect-text">Cult instantly expands to an adjacent region when settlement is razed</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect only triggers when there is a valid adjacent region to expand to.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">+50% chance per turn to gain 9999 experience when channeling (cult owner lords in local region)</li>
+<li class="effect-item effect-item-green">Summon a daemonic invasion when Damage Walls succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Building is dismantled when Damage Building succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Instantly gain 99 Grimoires when hero actions succeed (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">+50% chance per turn to gain a random magical item of Uncommon quality when raiding (cult owner armies in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>This effect only triggers once per region.</p>
 </details>
 </li>
 <li class="effect-item effect-item-red">Battle reinforcement time: +200% when cult owner Lord is present in region (enemy armies in local region)</li>
-<li class="effect-item effect-item-red">Cooldown: +99% to all spells when cult owner Lord is present in region (enemy armies in local region)</li>
+<li class="effect-item effect-item-green">Enables attrition for the target army when Hinder Replenishment succeeds (cult owner heroes in local region)</li>
 <li class="effect-item effect-item-red">Miscast base chance: +50% when cult owner Lord is present in region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Local recruitment capacity: -2 when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Campaign movement range: -25% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Recruitment cost: +99% when cult owner Lord is present in the region (enemy armies in local region)</li>
 <li class="effect-item effect-item-red">Ammunition: -100% when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Global recruitment duration: -1 turn for all units (cult owner armies in local region)</li>
-<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in region)</li>
-<li class="effect-item effect-item-red">Breakable Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</li>
-<li class="effect-item effect-item-red">Corruptible wizard Lords defeated in battle are marked and will become a daemon prince if defeated again by Tzeentchian forces (region owner lords in region)</li>
-<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in province)</li>
+<li class="effect-item effect-item-green">Global recruitment duration: -1 turn (cult owner armies in local region)</li>
+<li class="effect-item effect-item-green">Target army is teleported when Block Army succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-green">Target character is wounded for +9 turns when Wound or Assassinate succeeds (cult owner heroes in local region)</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Lords will rout from battle while cult owner lord is present in the region (region owner Lords in region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Unbreakable Lords are immune to this effect.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">
+<div class="effect-text">Marks the nearest corruptible region-owner wizard Lord for 9 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>This effect does not apply to Legendary Lords. Marked Lords are revealed and become daemon princes if defeated by a Lord of Tzeentch and survive the battle. This effect is limited to one Lord per faction.</p>
+</details>
+</li>
+<li class="effect-item effect-item-red">Local Recruitment duration: +1 turn when cult owner Lord is present in the region (region owner armies in local province)</li>
 <li class="effect-item effect-item-green">A random unique trait is granted to a random wizard character when settlement is razed (razing cult owner army)</li>
 <li class="effect-item effect-item-red">Reinforcement range: -99% when cult owner Lord is present in the region (region owner armies in local region)</li>
 <li class="effect-item effect-item-red">Winds of Magic cost: +99% for all spells when cult owner Lord is present in the region (enemy armies in local region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in region)</li>
-<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Fate Reflected&quot; (cult owner Lords in local region)</li>
+<li class="effect-item effect-item-green">Passive ability: &quot;Treacherous Tempest&quot; (cult owner Lords in local region)</li>
 <li class="effect-item effect-item-green">
-<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in region)</div>
+<div class="effect-text">The most damaged unit in the target army is spawnified when Assault Units succeeds (cult owner heroes in local region)</div>
 <details class="effect-detail">
 <summary>Additional Details</summary>
 <p>Only multi-entity units can be transformed.</p>
+</details>
+</li>
+<li class="effect-item effect-item-green">
+<div class="effect-text">Reveals the nearest region owner Lord for 2 turns when Steal Technology succeeds (cult owner heroes in local region)</div>
+<details class="effect-detail">
+<summary>Additional Details</summary>
+<p>Only unseen Lords are revealed.</p>
 </details>
 </li>
 </ul>
